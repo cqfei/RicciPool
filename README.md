@@ -1,4 +1,4 @@
-StructPool
+RicciPool 
 =============
 The code  is based on StructPool: ICLR paper: StructPool: Structured Graph Pooling via Conditional Random Fields
 
