@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bac97abb-13c9-44f3-ac9d-586db361522c" name="RicciPool" url="http://159.226.47.208">
+        <fileTransfer rootFolder="/data36t/feifei/projects/RicciPool-main" accessType="SFTP" host="159.226.47.208" port="22" sshConfigId="bbd8f0a8-1401-4ee6-8d8d-a90d37d7af55" sshConfig="riccPool">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
