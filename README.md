@@ -11,7 +11,7 @@ In pool.py, the following code aims to load offline weight adjusted by ricci flo
 > # Load adjusted weight via Ricci flow
 > A = torch.load(f'./weights/{cmd_args.data}/graph{graph.order}_lr{self.lr}_alpha{self.alpha}_iter{self.number_iterations}.pt')
 > ```
-The args in upper code:
+The parameters in upper code:
 - `cmd_args.data`: Dataset name  
 - `graph.order`: Graph ID  
 - `self.lr`/`self.alpha`: Parameters for Ollivier Ricci curvature computation (default: 1.0 and 0.5)  
