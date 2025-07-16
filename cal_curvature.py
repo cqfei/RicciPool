@@ -36,23 +36,23 @@ def cal_curvature():
         for lr in lrs:
             for alpha in alphas:
                 for j in range(number_iterations):
-                    # if os.path.exists(f'./curvatures/{cmd_args.data}/graph{i}_lr{lr}_alpha{alpha}_iter{j+1}.pt'):
-                    #     continue
-                    # if os.path.exists(f'./weights/{cmd_args.data}/graph{i}_lr{lr}_alpha{alpha}_iter{j+1}.pt'):
-                    #     continue
+                    if os.path.exists(f'./curvatures/{cmd_args.data}/graph{i}_lr{lr}_alpha{alpha}_iter{j+1}.pt'):
+                        continue
+                    if os.path.exists(f'./weights/{cmd_args.data}/graph{i}_lr{lr}_alpha{alpha}_iter{j+1}.pt'):
+                        continue
 
                     nx_graph = nx.from_numpy_array(A)
                     orc = OllivierRicci(nx_graph, alpha=alpha, verbose="INFO")
                     orc.compute_ricci_curvature()
                     nx_graph_ricci_curv = np.asarray(nx.to_numpy_array(orc.G, weight='ricciCurvature'))
                     A = A * (1 - lr * nx_graph_ricci_curv)
-                    # if not os.path.exists(f'./curvatures/{cmd_args.data}'):
-                    #     os.mkdir(f'./curvatures/{cmd_args.data}')
-                    # if not os.path.exists(f'./weights/{cmd_args.data}'):
-                    #     os.mkdir(f'./weights/{cmd_args.data}')
-                    #
-                    # torch.save(torch.Tensor(nx_graph_ricci_curv),f'./curvatures/{cmd_args.data}/graph{i}_lr{lr}_alpha{alpha}_iter{j+1}.pt',)
-                    # torch.save(torch.Tensor(A),f'./weights/{cmd_args.data}/graph{i}_lr{lr}_alpha{alpha}_iter{j+1}.pt',)
+                    if not os.path.exists(f'./curvatures/{cmd_args.data}'):
+                        os.mkdir(f'./curvatures/{cmd_args.data}')
+                    if not os.path.exists(f'./weights/{cmd_args.data}'):
+                        os.mkdir(f'./weights/{cmd_args.data}')
+                    
+                    torch.save(torch.Tensor(nx_graph_ricci_curv),f'./curvatures/{cmd_args.data}/graph{i}_lr{lr}_alpha{alpha}_iter{j+1}.pt',)
+                    torch.save(torch.Tensor(A),f'./weights/{cmd_args.data}/graph{i}_lr{lr}_alpha{alpha}_iter{j+1}.pt',)
     print('Cost: ',time.time()-start_time)
 
 
