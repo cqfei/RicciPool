@@ -1,10 +1,6 @@
 RicciPool 
 =============
-The code  is based on StructPool: ICLR paper: StructPool: Structured Graph Pooling via Conditional Random Fields
-
-=============
-
-StructPool code is built based on DGCNN(https://github.com/muhanzhang/pytorch_DGCNN) and Graph UNet(https://github.com/HongyangGao/Graph-U-Nets). Thanks a lot for their code sharing! 
+The code  is based on StructPool: ICLR paper: StructPool: Structured Graph Pooling via Conditional Random Fields. StructPool code is built based on DGCNN(https://github.com/muhanzhang/pytorch_DGCNN) and Graph UNet(https://github.com/HongyangGao/Graph-U-Nets). Thanks a lot for their code sharing! 
 
 The proposed Pooling Layer
 =============
@@ -13,7 +9,7 @@ We first employ GCNs to obtain u(x) for a batch. Next, perform pooling for each 
 
 Please refer to "DGCNN_embedding.py" and "pool.py" for details.
 
-Installation
+Usage
 ------------
 
 This implementation is based on Hanjun Dai's structure2vec graph backend. Under the "lib/" directory, type
