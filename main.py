@@ -42,7 +42,6 @@ cmd_args.number_iterations = 5
 cmd_args.sortpooling_k=32
 
 device=cmd_args.gpu
-# cross_fold= 11
 #训练10轮取平均
 cross_fold=10
 class Classifier(nn.Module):
