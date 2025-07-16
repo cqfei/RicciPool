@@ -1,6 +1,6 @@
 RicciPool 
 =============
-The code  is based on StructPool: ICLR paper: StructPool: Structured Graph Pooling via Conditional Random Fields. StructPool code is built based onStructPool(https://github.com/Nate1874/StructPool), DGCNN(https://github.com/muhanzhang/pytorch_DGCNN) and Graph UNet(https://github.com/HongyangGao/Graph-U-Nets). Thanks a lot for their code sharing! 
+Our code is built based on StructPool(https://github.com/Nate1874/StructPool), DGCNN(https://github.com/muhanzhang/pytorch_DGCNN) and Graph UNet(https://github.com/HongyangGao/Graph-U-Nets). Thanks a lot for their code sharing! 
 
 Usage
 ------------
