@@ -28,7 +28,7 @@ class Pool(nn.Module):
     def forward(self, A, X, U, graph):
         ''' Use GCNs to obtain u(x) '''
         device = A.device
-        #load adjusted weight via curvature
+        #load adjusted weight via ricci flow
         A=torch.load(f'./weights/{cmd_args.data}/graph{graph.order}_lr{self.lr}_alpha{self.alpha}_iter{self.number_iterations}.pt')
         A=A.to(device=device)
         q_values=U
